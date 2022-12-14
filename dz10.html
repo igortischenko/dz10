@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const toDoList = {
+            list:[],
+
+            newList(head,text,) {
+                const note = {
+                    head,
+                    text,
+                    status: false
+                };
+
+                if(this.checkStatus(head)){
+                    this.list[head] = note;
+                }
+            },
+
+            removeList(head) {
+                const remove = this.list.findIndex(note => note.head === head);
+                
+                this.list.splice(index, 1);
+            },
+
+            statusList(head) {
+                this.list = this.list.map(note => {
+                    if(note.head === head){
+                        note.completed = !note.completed
+                    }
+                    
+                    return note;
+
+                    });
+                 },
+
+            statsList(){
+                return this.list.reduce((stats, note) => {
+                    if(!info.total) {
+                        info.total = this.list.length;
+                    }
+
+                    if(!info[note.status]) {
+                        info[note.status] = 0;
+                    }
+                    info[note.status]++;
+
+                    return info;
+                }, {})
+            },
+
+            checkStatus(head){
+                return !this.list[head]
+            
+                }
+            };
+
+            
+    </script>
+</body>
+</html>
